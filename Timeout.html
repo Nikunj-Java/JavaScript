@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TimeOuts</h1>
+
+    <p id="ex1"></p>
+    <br>
+
+    <p id="ex2"></p>
+    <br>
+
+    <p id="ex3"></p>
+
+
+    <script>
+
+        //example-1
+        function greeting(){
+            let msg="Hello World";
+            document.getElementById("ex1").innerHTML=msg;
+        }
+
+        setTimeout(greeting,5000);
+        document.write("This is First Msg")
+
+
+        //program to display a name
+
+        function name_greet(name,lname){
+            console.log('Hello'+' '+name+' '+lname);
+            document.getElementById("ex2").innerHTML='Hello'+' '+name+' '+lname;
+        }
+
+        setTimeout(name_greet,3000,'nikunj','soni');
+
+
+        //program to display date
+
+        function showTime(){
+            let dateTime= new Date();
+            let time= dateTime.toLocaleTimeString();
+            document.getElementById("ex3").innerHTML=time;
+            setTimeout(showTime,3000);
+        }
+
+        showTime();
+
+    </script>
+    
+</body>
+</html>

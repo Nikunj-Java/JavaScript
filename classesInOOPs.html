@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>OPPS-Classes</h1>
+
+    <script>
+        //defining class using es6
+
+        class Bike{
+            constructor(name,maker,engine){
+                this.name=name;
+                this.maker=maker;
+                this.engine=engine;
+            }
+
+            getDetails(){
+                return "The name of the Bike is :"+this.name;
+            }
+        }
+
+        //making object with the help of constructor
+        let bike1= new Bike("Hayabusa","SUZUKI","1500cc");
+        let bike2= new Bike("Revolt RV 400","Revolt","1200cc");
+
+        console.log(bike1.name); //Hybusa
+        console.log(bike2.name); //revolt rv 400
+
+        console.log(bike1.maker); //Suzuki
+        console.log(bike2.maker); //Revolt
+    
+
+
+    </script>
+    
+</body>
+</html>

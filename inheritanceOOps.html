@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Inheritance OOPs</h1>
+
+    <script>
+
+        class person{
+            constructor(name){
+                this.name=name;
+            }
+            //to string method to return the string
+            toString(){
+                return "Name of Person: "+this.name;
+            }
+        }
+
+        class student  extends person{
+            constructor(name,id){
+                super(name);
+                this.id=id;
+            }
+            toString(){
+                return (super.toString()+",Student Id: "+this.id);
+            }
+
+        }
+
+        let student1= new student("Nikunj Soni",45);
+        console.log(student1.toString());
+
+
+
+    </script>
+    
+</body>
+</html>

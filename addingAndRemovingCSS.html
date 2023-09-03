@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style>
+		.mystyle {
+		  width: 50%;
+		  padding: 25px;
+		  background-color: coral;
+		  color: white;
+		  font-size: 25px;
+		  box-sizing: border-box;
+		}
+		button {
+            padding: 5px 15px;
+			width: 25%;
+			padding: 25px;
+            background-color: green;
+            color: white;
+        }
+		</style>
+</head>
+<body>
+
+	
+
+	<div id="myDIV" class="mystyle">
+		This is My DiV
+		
+	</div>
+	<button onclick="add()">Add CSS</button>
+	<button onclick="remove()">Remove CSS</button>
+
+	<script>
+		function add() {
+			var element = document.getElementById("myDIV");
+			element.classList.add("mystyle");
+		}
+		function remove() {
+			var element = document.getElementById("myDIV");
+			element.classList.remove("mystyle");
+		}
+	</script>
+	
+</body>
+</html>

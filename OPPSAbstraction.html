@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>OPPS-Abstraction</h1>
+
+    <script>
+        //abstraction
+
+        function person(fname,lname){
+            let firstName=fname;
+            let lastName=lname;
+
+            let getDetails_noaccess = function(){
+                return "FirstName: "+firstName+" LastName: "+lastName;
+            }
+
+            this.getDetails_access = function(){
+                return "FirstName: "+firstName+" LastName: "+lastName;
+            }
+        }
+
+        let person1=new person("Nikunj","Soni");
+
+        console.log(person1.firstName);
+        console.log(person1.getDetails_noaccess);
+        console.log(person1.getDetails_access());
+
+
+    </script>
+    
+</body>
+</html>

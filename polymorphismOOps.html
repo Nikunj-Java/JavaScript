@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Polymorphism OOPs</h1>
+
+    <script>
+        //example
+        class firstClass{
+            add(){
+                console.log("This is My Method 1");
+            }
+        }
+
+        class secondClass extends firstClass{
+            add(){
+                console.log(100 + 240);
+            }
+        }
+
+        class thirdClass extends secondClass{
+            add(){
+                console.log("This is My Method 2")
+            }
+        }
+
+        var obj1= new firstClass();
+        var obj2= new secondClass();
+        var obj3= new thirdClass();
+
+        obj1.add();
+        obj2.add();
+        obj3.add();
+    </script>
+    
+</body>
+</html>

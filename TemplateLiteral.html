@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Template Literals Example</h1>
+
+    <p> template Literals are used for showing varibales in String:</p>
+    <p id="basic"></p>
+    <p id="temp"></p>
+    <p id="demo"></p>
+    <br>
+    <p>template Literals do not work with Internate Explorer</p>
+
+    <script>
+        //Basic
+        let basic=`He's often Called NIKUNJ SONI`;
+        document.getElementById("basic").innerHTML=basic;
+
+        //string literals using interpolation
+        let firstName="Nikunj";
+        let lastname="Soni";
+
+        let text=`Hello!! ${firstName},${lastname}!`;
+        document.getElementById("temp").innerHTML=text;
+
+        //expressions literals using interpolation
+
+        let amount=100;
+        let TAX=0.18;
+
+        let total=`Total: ${(amount *(1+TAX)).toFixed(3)}`;
+        document.getElementById("demo").innerHTML=total;
+    </script>
+    
+</body>
+</html>
