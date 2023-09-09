@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<h3>Remove an HTML Element.</h3>
+
+<div id="parent">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<button onclick="myFunction()">Remove Element</button>
+
+<button onclick="RemoveChild()">Remove Child</button>
+
+<button onclick="ReplaceHTML()">Replace HTML</button>
+
+<script>
+
+function myFunction() {
+document.getElementById("p1").remove();
+ 
+}
+
+function RemoveChild(){
+
+const parent=document.getElementById("parent");
+const child = document.getElementById("p2");
+parent.removeChild(child);
+}
+
+
+function ReplaceHTML(){
+
+const child1 = document.createElement("p1");
+const node = document.createTextNode("This is new.");
+child1.appendChild(node);
+
+const parent = document.getElementById("parent");
+const child2 = document.getElementById("p1");
+parent.replaceChild(child1, child2);
+
+parent.replaceChild(child2);
+}
+
+
+
+</script>
+
+</body>
+</html>
